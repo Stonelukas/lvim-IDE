@@ -172,9 +172,9 @@ modules["nvim-neo-tree/neo-tree.nvim"] = {
     cmd = "Neotree",
     keys = {
         { "<S-x>", "<cmd>Neotree toggle filesystem left<CR>", desc = "NeoTree filesystem" },
-        { "<C-c><C-f>", "<cmd>Neotree toggle filesystem left<CR>", desc = "NeoTree filesystem" },
-        { "<C-c><C-b>", "<cmd>Neotree toggle buffers left<CR>", desc = "NeoTree buffers" },
-        { "<C-c><C-g>", "<cmd>Neotree toggle git_status left<CR>", desc = "NeoTree git status" },
+        { "<C-c>F", "<cmd>Neotree toggle filesystem left<CR>", desc = "NeoTree filesystem" },
+        { "<C-c>B", "<cmd>Neotree toggle buffers left<CR>", desc = "NeoTree buffers" },
+        { "<C-c>G", "<cmd>Neotree toggle git_status left<CR>", desc = "NeoTree git status" },
         { "<S-q>", "<cmd>Neotree toggle close<CR>", desc = "NeoTree close" },
     },
     dependencies = {
