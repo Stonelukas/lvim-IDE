@@ -27,8 +27,10 @@ local configs = {}
 -- HELP ---------------------------------------------------------
 -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+local global = require("core.global")
 local funcs = require("core.funcs")
 local keymaps = require("configs.user.keymaps")
+local options = require("configs.user.options")
 
 local group = vim.api.nvim_create_augroup("User", {
     clear = true,
@@ -67,10 +69,14 @@ configs["user_vim"] = {
     }),
 }
 
-configs["base_keymaps"] = function()
+configs["user_keymaps"] = function()
     funcs.keymaps("n", { noremap = true, silent = true }, keymaps.normal)
     funcs.keymaps("x", { noremap = true, silent = true }, keymaps.visual)
     funcs.keymaps("i", { noremap = true, silent = true }, keymaps.insert)
+end
+
+configs["user_options"] = function()
+    options.global()
 end
 
 return configs

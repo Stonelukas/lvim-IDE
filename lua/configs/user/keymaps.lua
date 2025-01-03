@@ -1,7 +1,7 @@
 local keymaps = {}
 
 keymaps["normal"] = {
-    { "p", "]p", "Paste with right indentation" },
+    { "P", "]p", "Paste with right indentation" },
 }
 
 keymaps["visual"] = {}

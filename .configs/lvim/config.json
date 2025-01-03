@@ -1,1 +1,1 @@
-{"keyshelper": true, "floatheight": 0.5, "virtualdiagnostic": false, "autoformat": true, "theme": "lvim-catppuccin-dark", "inlayhint": false, "keyshelperdelay": 0}
+{"keyshelper": true, "floatheight": 0.5, "virtualdiagnostic": false, "autoformat": true, "keyshelperdelay": 0, "inlayhint": true, "theme": "lvim-catppuccin-dark"}
