@@ -30,8 +30,8 @@ keymaps["normal"] = {
     { "<C-c>c", ":Inspect<CR>", "Inspect" }, -- Inspect
     { "<C-c>O", ":lua vim.ui.open(vim.fn.expand('%'))<CR>", "Open in browser" }, -- Open in browser
     { "<Leader>n", ":ene | startinsert<CR>", "New file" }, -- New file
-    { "<Leader>to", ":$tabnew<CR>", "Tab new" }, -- Tne new
-    { "<Leader>tc", ":$tabclose<CR>", "Tab close" }, -- Tne close
+    { "<Leader>to", ":$tabnew<CR>", "Tab new" }, -- Tab new
+    { "<Leader>tc", ":$tabclose<CR>", "Tab close" }, -- Tab close
     { "<Leader>tn", ":tabn<CR>", "Tab next" }, -- Tab next
     { "<Leader>tp", ":tabp<CR>", "Tab prev" }, -- Tab prev
     { "<Leader>tmn", ":+tabmove<CR>", "Tab move next" }, -- Tab move next
