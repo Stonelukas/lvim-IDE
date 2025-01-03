@@ -77,4 +77,14 @@ local modules = {}
 --     config = completion_config.name_of_your_function
 -- }
 
+local version_control_config = require("modules.user.configs.version_control")
+local ui_config = require("modules.user.configs.ui")
+modules["ruifm/gitlinker.nvim"] = {
+    requires = "nvim-lua/plenary.nvim",
+    config = version_control_config.gitlinker,
+}
+modules["lvim-tech/lvim-focus"] = {
+    config = ui_config.lvim_focus,
+}
+
 return modules
