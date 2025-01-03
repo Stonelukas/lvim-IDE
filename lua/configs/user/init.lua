@@ -27,4 +27,41 @@ local configs = {}
 -- HELP ---------------------------------------------------------
 -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+local group = vim.api.nvim_create_augroup("User", {
+    clear = true,
+})
+configs["user_vim"] = {
+    vim.api.nvim_create_autocmd("FileType", {
+        group = group,
+        pattern = {
+            "fugitive",
+            "git",
+            "lspinfo",
+            "man",
+            "toggleterm",
+            "vim",
+            "PlenaryTestPopup",
+            "help",
+            "neo-tree",
+            "lspinfo",
+            "notify",
+            "qf",
+            "spectre_panel",
+            "startuptime",
+            "tsplayground",
+            "neotest-output",
+            "checkhealth",
+            "neotest-summary",
+            "neotest-output-panel",
+            "dbout",
+            "gitsigns.blame",
+            "TelescopePrompt",
+        },
+            callback = function(event)
+        vim.bo[event.buf].buflisted = false
+        vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+    end,
+    }),
+}
+
 return configs
