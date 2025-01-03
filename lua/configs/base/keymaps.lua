@@ -45,8 +45,6 @@ keymaps["visual"] = {
     { "#", "<Esc>?\\%V" }, -- Visual search ?
 }
 
-keymaps["insert"] = {
-    { "jj", "<Esc>", "Exit Insert mode" }, -- Exit insert mode
-}
+keymaps["insert"] = {}
 
 return keymaps

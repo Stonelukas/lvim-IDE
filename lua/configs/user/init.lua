@@ -27,6 +27,9 @@ local configs = {}
 -- HELP ---------------------------------------------------------
 -- >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+local funcs = require("core.funcs")
+local keymaps = require("configs.user.keymaps")
+
 local group = vim.api.nvim_create_augroup("User", {
     clear = true,
 })
@@ -57,11 +60,17 @@ configs["user_vim"] = {
             "gitsigns.blame",
             "TelescopePrompt",
         },
-            callback = function(event)
-        vim.bo[event.buf].buflisted = false
-        vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
-    end,
+        callback = function(event)
+            vim.bo[event.buf].buflisted = false
+            vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+        end,
     }),
 }
+
+configs["base_keymaps"] = function()
+    funcs.keymaps("n", { noremap = true, silent = true }, keymaps.normal)
+    funcs.keymaps("x", { noremap = true, silent = true }, keymaps.visual)
+    funcs.keymaps("i", { noremap = true, silent = true }, keymaps.insert)
+end
 
 return configs
