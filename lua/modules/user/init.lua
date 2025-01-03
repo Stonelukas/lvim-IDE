@@ -76,9 +76,12 @@ local modules = {}
 -- modules["name_of_your/module"] = {
 --     config = completion_config.name_of_your_function
 -- }
+local funcs = require("core.funcs")
 
 local version_control_config = require("modules.user.configs.version_control")
 local ui_config = require("modules.user.configs.ui")
+local languages_config = require("modules.user.configs.languages")
+
 modules["ruifm/gitlinker.nvim"] = {
     requires = "nvim-lua/plenary.nvim",
     config = version_control_config.gitlinker,
@@ -86,5 +89,11 @@ modules["ruifm/gitlinker.nvim"] = {
 modules["lvim-tech/lvim-focus"] = {
     config = ui_config.lvim_focus,
 }
+
+modules["pechorin/any-jump.vim"] = {
+    config = languages_config.any_jump,
+}
+
+modules["mattn/emmet-vim"] = {}
 
 return modules

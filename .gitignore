@@ -43,3 +43,5 @@ luac.out
 .git/cs_workspaces
 cs_files
 cs_workspaces
+
+lazy-lock.json
